@@ -8,8 +8,6 @@ namespace WordFinderApp
     {
         static void Main(string[] args)
         {
-            var reportGenerator = new ReportGenerator();
-
             // 12x12 matrix definition
             var matrix = new List<string>
             {
@@ -38,7 +36,8 @@ namespace WordFinderApp
 
             var wordFinder = new WordFinder(matrix);
             var wordFrequency = wordFinder.Find(wordStream);
-            reportGenerator.GenerateTopNReport(wordFrequency);
+
+            ReportGenerator.GenerateTopNReport(wordFrequency);
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadLine();

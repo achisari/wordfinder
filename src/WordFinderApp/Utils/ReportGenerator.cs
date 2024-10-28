@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace WordFinderApp.Utils
 {
-    public class ReportGenerator
+    public static class ReportGenerator
     {
         /// <summary>
         /// Generates a report of the top N words by printing each word to the console.
         /// </summary>
         /// <param name="words">A collection of words to include in the report.</param>
-        public void GenerateTopNReport(IEnumerable<string> words)
+        public static void GenerateTopNReport(IEnumerable<string> words)
         {
             if (words == null || !words.Any())
             {
